@@ -5,7 +5,6 @@ manifest:
   projects:
     - name: zmk
       remote: zmk
-      revision: dracula-test
       import: app/west.yml
   self:
     path: config
