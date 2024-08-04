@@ -78,13 +78,12 @@ jobs:
         uses: jwlawson/actions-setup-cmake@v2
       - name: Use cmake
         run: cmake --version
-      - name: Install Zephyr SDK
+      - name: Install Zephyr SDK 0.13.1
         run: |
-          wget https://github.com/zephyrproject-rtos/sdk-ng/releases/download/v0.13.1/zephyr-sdk-0.13.1-setup.run
-          chmod +x zephyr-sdk-0.13.1-setup.run
-          ./zephyr-sdk-0.13.1-setup.run -- -d ~/zephyr-sdk
-          echo "export ZEPHYR_TOOLCHAIN_VARIANT=zephyr" >> $GITHUB_ENV
-          echo "export ZEPHYR_SDK_INSTALL_DIR=~/zephyr-sdk" >> $GITHUB_ENV
+          wget https://github.com/zephyrproject-rtos/sdk-ng/releases/download/v0.13.1/zephyr-sdk-0.13.1-linux-x86_64-setup.run
+          chmod +x zephyr-sdk-0.13.1-linux-x86_64-setup.run
+          ./zephyr-sdk-0.13.1-linux-x86_64-setup.run -- -d ~/zephyr-sdk-0.13.1
+          echo "ZEPHYR_SDK_INSTALL_DIR=$HOME/zephyr-sdk-0.13.1" >> $GITHUB_ENV
 
       - name: West Init
         run: west init -l config
