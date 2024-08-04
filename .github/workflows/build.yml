@@ -39,10 +39,8 @@ jobs:
         run: |
           apt update
           apt install -y nodejs  
-      - name: Setup cmake
-        uses: jwlawson/actions-setup-cmake@v2
-        with:
-          cmake-version: '3.3'
+      - name: Get latest CMake and Ninja
+        uses: lukka/get-cmake@latest
       - name: Use cmake
         run: cmake --version
       - name: Prepare variables
