@@ -41,8 +41,8 @@ jobs:
           apt install -y nodejs
       - name: Install CMake
         run: |
-        sudo apt-get update
-        sudo apt-get install -y cmake
+          sudo apt-get update
+          sudo apt-get install -y cmake
       - name: Prepare variables
         id: variables
         run: |
