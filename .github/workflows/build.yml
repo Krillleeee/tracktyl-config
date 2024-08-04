@@ -78,6 +78,16 @@ jobs:
         run: west update
       - name: West Zephyr export
         run: west zephyr-export
+      - name: Install CMake from Kitware APT Repository
+        run: |
+          apt-get update
+          apt-get install -y apt-transport-https ca-certificates gnupg software-properties-common wget
+          wget -O /usr/share/keyrings/kitware-archive-keyring.gpg https://apt.kitware.com/keys/kitware-archive-latest.asc
+          echo 'deb [signed-by=/usr/share/keyrings/kitware-archive-keyring.gpg] https://apt.kitware.com/ubuntu/ focal main' | tee /etc/apt/sources.list.d/kitware.list >/dev/null
+          apt-get update
+          apt-get install -y cmake
+      - name: Verify CMake version
+        run: cmake --version
       - name: West Build (${{ steps.variables.outputs.display-name }})
         run: |
           west build -s zmk/app -b ${{ matrix.board }} -- -DZMK_CONFIG=${GITHUB_WORKSPACE}/config ${{ steps.variables.outputs.extra-cmake-args }} ${{ matrix.cmake-args }}
