@@ -39,8 +39,6 @@ jobs:
         run: |
           apt update
           apt install -y nodejs  
-      - name: Get latest CMake and Ninja
-        uses: lukka/get-cmake@latest
       - name: Use cmake
         run: cmake --version
       - name: Prepare variables
@@ -76,6 +74,10 @@ jobs:
             ${{ runner.os }}-build-${{ env.cache-name }}-
             ${{ runner.os }}-build-
             ${{ runner.os }}-
+      - name: Setup cmake
+        uses: jwlawson/actions-setup-cmake@v2
+      - name: Use cmake
+        run: cmake --version
       - name: West Init
         run: west init -l config
       - name: West Update
