@@ -42,7 +42,11 @@ jobs:
       - name: Install CMake
         run: |
           apt-get update
-          apt-get install -y cmake
+          apt-get install -y apt-transport-https ca-certificates gnupg software-properties-common wget
+          wget -O /usr/share/keyrings/kitware-archive-keyring.gpg https://apt.kitware.com/keys/kitware-archive-latest.asc
+          echo 'deb [signed-by=/usr/share/keyrings/kitware-archive-keyring.gpg] https://apt.kitware.com/ubuntu/ focal main' | sudo tee /etc/apt/sources.list.d/kitware.list >/dev/null
+          apt-get update
+          apt-get install -y cmake    
       - name: Verify CMake version
         run: cmake --version
       - name: Prepare variables
