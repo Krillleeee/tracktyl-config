@@ -43,7 +43,7 @@ jobs:
         uses: jwlawson/actions-setup-cmake@v2
         with:
           cmake-version: '3.3'
-    - name: Use cmake
+      - name: Use cmake
         run: cmake --version
       - name: Prepare variables
         id: variables
