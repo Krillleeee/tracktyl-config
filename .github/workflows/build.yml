@@ -34,17 +34,17 @@ jobs:
       fail-fast: false
       matrix: ${{fromJson(needs.matrix.outputs.matrix)}}
     steps:
-    - name: Setup cmake
-        uses: jwlawson/actions-setup-cmake@v2
-        with:
-          cmake-version: '3.3'
-    - name: Use cmake
-      run: cmake --version
       - if: ${{ env.ACT }}
         name: Install node
         run: |
           apt update
           apt install -y nodejs  
+      - name: Setup cmake
+        uses: jwlawson/actions-setup-cmake@v2
+        with:
+          cmake-version: '3.3'
+    - name: Use cmake
+        run: cmake --version
       - name: Prepare variables
         id: variables
         run: |
