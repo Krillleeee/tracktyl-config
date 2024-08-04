@@ -43,6 +43,8 @@ jobs:
         run: |
           apt-get update
           apt-get install -y cmake
+      - name: Verify CMake version
+        run: cmake --version
       - name: Prepare variables
         id: variables
         run: |
@@ -82,6 +84,8 @@ jobs:
         run: west update
       - name: West Zephyr export
         run: west zephyr-export
+      - name: Verify CMake version
+        run: cmake --version
       - name: West Build (${{ steps.variables.outputs.display-name }})
         run: |
           west build -s zmk/app -b ${{ matrix.board }} -- -DZMK_CONFIG=${GITHUB_WORKSPACE}/config ${{ steps.variables.outputs.extra-cmake-args }} ${{ matrix.cmake-args }}
