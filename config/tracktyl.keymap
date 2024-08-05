@@ -8,6 +8,7 @@
 #define L_MOUSE 4
 #define L_SCROLL 5
 
+/
 {
     keymap {
         compatible = "zmk,keymap";
