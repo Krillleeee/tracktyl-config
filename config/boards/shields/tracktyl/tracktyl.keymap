@@ -8,7 +8,7 @@
 #define NUMS 2
 #define LWR 3
 
-{
+/ {
     keymap {
         compatible = "zmk,keymap";
 
