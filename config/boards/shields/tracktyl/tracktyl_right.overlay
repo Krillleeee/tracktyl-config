@@ -25,7 +25,7 @@
             ;
 };
 
-&pro_micro_spi {
+&nice_nano {
 	compatible = "nordic,nrf-spim";
     status = "okay";
 
@@ -35,7 +35,7 @@
     cs-gpios = <&gpio0 8 GPIO_ACTIVE_LOW>; // P0.24
 
     trackball: trackball@0 {
-        compatible = "pixart,pmw33xx";
+        compatible = "pixart,pmw3360";
         reg = <0>;
         label = "Pixart PMW3360";
         cs-gpios = <&gpio0 8 GPIO_ACTIVE_LOW>; // P0.24
