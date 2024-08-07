@@ -4,7 +4,7 @@ manifest:
       url-base: https://github.com/Krillleeee
   projects:
     - name: zmk-fork-clone
-      remote: zmk-fork-clone
+      remote: zmk
       revision: main
       import: app/west.yml
   self:
