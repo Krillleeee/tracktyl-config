@@ -25,8 +25,8 @@
             ;
 };
 
+
 &pro_micro_spi {
-	compatible = "nordic,nrf-spim";
     status = "okay";
 
     miso-pin = <17>; // P0.17
@@ -35,14 +35,11 @@
     cs-gpios = <&gpio0 8 GPIO_ACTIVE_LOW>; // P0.24
 
     trackball: trackball@0 {
-        compatible = "pixart,pmw3360";
+        compatible = "pixart,paw3395";
         reg = <0>;
         label = "Pixart PMW3360";
-        cs-gpios = <&gpio0 8 GPIO_ACTIVE_LOW>; // P0.24
-        motswk-gpios = <&gpio0 6 GPIO_ACTIVE_LOW>; // P1.00 = 32 + 0
-        spi-max-frequency = <10000000>;
-        cpi = <600>;
+        irq-gpios = <&gpio0 6 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
+        spi-max-frequency = <2000000>;
+        scroll-layer = <5>;
     };
 };
-
-
