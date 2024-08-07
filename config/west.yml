@@ -1,11 +1,11 @@
 manifest:
   remotes:
     - name: zmk
-      url-base: https://github.com/drorchen
+      url-base: https://github.com/Krillleeee
   projects:
-    - name: zmk
-      remote: zmk
-      revision: trackball-support
+    - name: zmk-fork-clone
+      remote: zmk-fork-clone
+      revision: main
       import: app/west.yml
   self:
     path: config
