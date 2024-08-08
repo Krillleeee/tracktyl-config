@@ -1,11 +1,11 @@
 manifest:
   remotes:
-    - name: zmkfirmware
-      url-base: https://github.com/ALpotato
+    - name: zmk
+      url-base: https://github.com/ufan
   projects:
     - name: zmk
-      remote: zmkfirmware
-      revision: ptdevice-alpotato
+      remote: zmk
+      revision: ptdevice-refactor
       import: app/west.yml
   self:
     path: config
