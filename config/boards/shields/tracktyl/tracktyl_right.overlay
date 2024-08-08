@@ -25,14 +25,13 @@
             ;
 };
 
-
 &spi1 {
     status = "okay";
     miso-pin = <17>;
     mosi-pin = <20>;
     sck-pin = <22>;
     cs-gpios = <&gpio0 8 GPIO_ACTIVE_LOW>;
-    trackball: trackball@0 {
+    paw3395: paw3395@0 {
         compatible = "pixart,paw3395";
         reg = <0>;
         label = "PAW3395";
@@ -40,6 +39,28 @@
         irq-gpios = <&gpio0 6 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
     };
 };
+
+
+
+&spi1 {
+    status = "okay";
+    compatible = "nordic,nrf-spim";
+    miso-pin = <NRF_PSEL(SPIM_MISO, 0, 17)>;
+    mosi-pin = <NRF_PSEL(SPIM_MISO, 0, 20)>;
+    sck-pin = <NRF_PSEL(SPIM_MISO, 0, 22)>;
+    cs-gpios = <&gpio0 8 GPIO_ACTIVE_LOW>;
+
+    trackball: trackball@0 {
+        status = "okay";
+        compatible = "pixart,paw3395";
+        reg = <0>;
+        spi-max-frequency = <2000000>;
+        irq-gpios = <&gpio0 6 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
+
+      
+    };
+};
+
 / {
   trackball_listener {
     compatible = "zmk,input-listener";
