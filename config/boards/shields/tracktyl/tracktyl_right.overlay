@@ -25,20 +25,18 @@
             ;
 };
 
-&pro_micro_spi {
+
+&spi1 {
     status = "okay";
-
-    miso-pin = <17>; // P0.17
-    mosi-pin = <20>; // P0.20
-    sck-pin = <22>; // P0.22
-    cs-gpios = <&gpio0 8 GPIO_ACTIVE_LOW>; // P0.24
-
-    trackball: trackball@0 {
+    miso-pin = <17>;
+    mosi-pin = <20>;
+    sck-pin = <22>;
+    cs-gpios = <&gpio0 8 GPIO_ACTIVE_LOW>;
+    paw3395: paw3395@0 {
         compatible = "pixart,paw3395";
         reg = <0>;
-        label = "Pixart PAW3395";
-        irq-gpios = <&gpio0 6 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
+        label = "PAW3395";
         spi-max-frequency = <2000000>;
-        scroll-layer = <5>;
+        irq-gpios = <&gpio0 6 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
     };
 };
