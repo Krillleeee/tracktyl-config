@@ -25,21 +25,6 @@
             ;
 };
 
-&spi1 {
-    status = "okay";
-    miso-pin = <17>;
-    mosi-pin = <20>;
-    sck-pin = <22>;
-    cs-gpios = <&gpio0 8 GPIO_ACTIVE_LOW>;
-    paw3395: paw3395@0 {
-        compatible = "pixart,paw3395";
-        reg = <0>;
-        label = "PAW3395";
-        spi-max-frequency = <2000000>;
-        irq-gpios = <&gpio0 6 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
-    };
-};
-
 
 
 &spi1 {
