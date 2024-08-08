@@ -27,12 +27,12 @@
 
 
 
-&spi1 {
+&spi0 {
     status = "okay";
     compatible = "nordic,nrf-spim";
-    miso-pin = <NRF_PSEL(SPIM_MISO, 0, 17)>;
-    mosi-pin = <NRF_PSEL(SPIM_MISO, 0, 20)>;
-    sck-pin = <NRF_PSEL(SPIM_MISO, 0, 22)>;
+    miso-pin = <17>;
+    mosi-pin = <20>;
+    sck-pin = <22>;
     cs-gpios = <&gpio0 8 GPIO_ACTIVE_LOW>;
 
     trackball: trackball@0 {
