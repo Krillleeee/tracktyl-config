@@ -34,7 +34,7 @@
     sck-pin = <22>; // P0.22
     cs-gpios = <&gpio0 8 GPIO_ACTIVE_LOW>; // P0.24
 
-    trackball: trackball@0 {
+    trackball: paw3395@0 {
         compatible = "paw3395";
         reg = <0>;
         label = "PAW3395";
