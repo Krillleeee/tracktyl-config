@@ -8,20 +8,20 @@
         
 
         row-gpios
-            = <&pro_micro (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
-            , <&pro_micro (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
-            , <&pro_micro (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
-            , <&pro_micro (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
-            , <&pro_micro (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+            = <&gpio0 24 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+            , <&gpio1 0 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+            , <&gpio0 11 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+            , <&gpio1 4 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+            , <&gpio1 6 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
             ;
 
         col-gpios
-            = <&pro_micro 11 GPIO_ACTIVE_HIGH>
-            , <&pro_micro 10 GPIO_ACTIVE_HIGH>
-            , <&pro_micro 9 GPIO_ACTIVE_HIGH>
-            , <&pro_micro 2 GPIO_ACTIVE_HIGH>
-            , <&pro_micro 15 GPIO_ACTIVE_HIGH>
-            , <&pro_micro 13 GPIO_ACTIVE_HIGH>
+            = <&gpio1 11 GPIO_ACTIVE_HIGH>
+            , <&gpio0 10 GPIO_ACTIVE_HIGH>
+            , <&gpio0 9 GPIO_ACTIVE_HIGH>
+            , <&gpio0 2 GPIO_ACTIVE_HIGH>
+            , <&gpio1 15 GPIO_ACTIVE_HIGH>
+            , <&gpio1 13 GPIO_ACTIVE_HIGH>
             ;
 };
 
@@ -34,7 +34,7 @@
     sck-pin = <22>; // P0.22
     cs-gpios = <&gpio0 8 GPIO_ACTIVE_LOW>; // P0.24
 
-    trackball: paw3395@0 {
+    trackball: trackball@0 {
         compatible = "paw3395";
         reg = <0>;
         label = "PAW3395";
