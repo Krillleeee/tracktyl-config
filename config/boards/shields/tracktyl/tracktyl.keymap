@@ -4,9 +4,6 @@
 #include <dt-bindings/zmk/outputs.h>
 
 #define DEFAULT 0
-#define ARWS 1
-#define NUMS 2
-#define LWR 3
 
 / 
 {
