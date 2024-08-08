@@ -35,7 +35,7 @@
     cs-gpios = <&gpio0 8 GPIO_ACTIVE_LOW>; // P0.24
 
     trackball: trackball@0 {
-        compatible = "paw3395";
+        compatible = "pixart,paw3395";
         reg = <0>;
         label = "PAW3395";
         irq-gpios = <&gpio0 6 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
