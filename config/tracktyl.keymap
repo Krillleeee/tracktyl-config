@@ -2,11 +2,7 @@
 #include <dt-bindings/zmk/keys.h>
 
 #define DEFAULT 0
-#define L_ARWS 1
-#define L_NUMS 2
-#define L_RAISE 3
-#define L_MOUSE 4
-#define L_SCROLL 5
+
 
 / {
     
