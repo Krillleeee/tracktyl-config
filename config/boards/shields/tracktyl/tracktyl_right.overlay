@@ -45,20 +45,9 @@
 };
 
 &usbd {
-    status = "okay";
-    hid_0 {
-        compatible = "zmk,hid-report";
-        label = "HID_0";
-        report-desc {
-            keyboard-report-0 {
-                compatible = "zmk,hid-report-keyboard";
-                label = "KEYBOARD_0";
-            };
-            mouse-report-0 {
-                compatible = "zmk,hid-report-mouse";
-                label = "MOUSE_0";
-            };
-        };
+    hid_mouse {
+        compatible = "zmk,hid-mouse";
+        status = "okay";
     };
 };
 
