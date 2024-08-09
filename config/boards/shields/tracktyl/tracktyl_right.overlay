@@ -34,7 +34,7 @@
     sck-pin = <22>; // P0.22
     cs-gpios = <&gpio0 8 GPIO_ACTIVE_LOW>; // P0.24
 
-    sensor: paw3395@0 {
+    trackball: trackball@0 {
         compatible = "pixart,paw3395";
         reg = <0>;
         label = "PAW3395";
