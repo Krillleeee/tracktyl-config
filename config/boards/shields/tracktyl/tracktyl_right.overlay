@@ -44,10 +44,5 @@
     };
 };
 
-&usbd {
-    hid_mouse {
-        compatible = "zmk,hid-mouse";
-        status = "okay";
-    };
-};
+
 
