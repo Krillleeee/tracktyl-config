@@ -38,10 +38,16 @@
         compatible = "pixart,paw3395";
         reg = <0>;
         label = "PAW3395";
-        irq-gpios = <&gpio0 6 GPIO_ACTIVE_LOW>;
+        irq-gpios = <&gpio0 6 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
         spi-max-frequency = <4000000>;
         
     };
 };
 
+&usbd {
+    hid_mouse {
+        compatible = "zmk,hid-mouse";
+        status = "okay";
+    };
+};
 
