@@ -1,11 +1,12 @@
 manifest:
   remotes:
     - name: zmk
-      url-base: https://github.com/ufan
+      url-base: https://github.com/Krillleeee
   projects:
     - name: zmk
       remote: zmk
-      revision: trackpad_dev
+      revision: support-trackball
       import: app/west.yml
   self:
     path: config
+z
