@@ -24,7 +24,14 @@
             , <&gpio1 13 GPIO_ACTIVE_HIGH>
             ;
 };
-
+&usbd {
+    status = "okay";
+    hs_0 {
+        compatible = "zmk,usb-hid";
+        label = "USB_HID";
+        init-priority = <90>;  // Increase this number to lower priority
+    };
+};
 
 &pro_micro_spi {
     status = "okay";
