@@ -8,9 +8,9 @@ manifest:
     - name: zmk
       remote: zmkfirmware
       revision: feat/pointers-move-scroll
+      import: app/west.yml
     - name: zmk
       remote: zmk
       revision: trackpad_dev
-    import: app/west.yml
   self:
     path: config
