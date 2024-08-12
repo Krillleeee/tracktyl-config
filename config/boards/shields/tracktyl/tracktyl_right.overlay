@@ -54,7 +54,8 @@
     trackball: trackball@0 {
         compatible = "pixart,paw3395";
         reg = <0>;
-        label = "Pixart PAW3395";        irq-gpios = <&gpio0 6 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
+        label = "Pixart PAW3395";        
+        irq-gpios = <&gpio0 6 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
         spi-max-frequency = <2000000>;
 
     };
