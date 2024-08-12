@@ -5,7 +5,7 @@
 #include <dt-bindings/zmk/outputs.h>
 
 #define DEFAULT 0
-
+#define MOUSE 1
 
 / {
     
@@ -37,6 +37,15 @@
 &kp CAPSLOCK    &kp A         &kp S         &kp D         &kp F           &kp G        &kp H         &kp J        &kp K         &kp L    &kp A     &kp B
 &kp LEFT_SHIFT  &kp Z         &kp X         &kp C         &kp V           &kp B        &kp N         &kp M        &kp COMMA     &kp DOT  &kp FSLH  &kp ASTERISK
 &trans          &trans        &trans        &kp SPACE     &mt LSHIFT TAB  &kp SPACE    &kp BSPC      &lt 0 ENTER  &lt 0 DELETE  &trans   &trans    &trans
+            >;
+        };
+mouse_layer {
+            bindings = <
+&trans      &trans        &trans        &trans        &trans        &trans          &trans        &trans        &trans        &trans        &trans        &trans
+&trans      &trans        &trans        &mkp MCLK     &mkp RCLK     &trans          &trans        &trans        &mmv MOVE_UP  &trans        &trans        &trans
+&trans      &trans        &mkp LCLK     &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_RIGHT &trans        &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_RIGHT &trans        &trans
+&trans      &trans        &trans        &mwh SCROLL_LEFT &mwh SCROLL_DOWN &mwh SCROLL_RIGHT &trans   &mwh SCROLL_LEFT &mwh SCROLL_DOWN &mwh SCROLL_RIGHT &trans     &trans
+&trans      &trans        &trans        &trans        &trans        &trans          &trans        &trans        &trans        &trans        &trans        &trans
             >;
         };
   
