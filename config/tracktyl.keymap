@@ -9,12 +9,29 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/mouse.h>
 #include <dt-bindings/zmk/outputs.h>
+#include <behaviors/mouse_move.dtsi>
 
 #define DEFAULT 0
 
 
 / {
-    
+     move_vert: move_vert {
+        compatible = "zmk,behavior-mouse-move";
+        label = "MOVE_VERT";
+        #sensor-binding-cells = <0>;
+        delay-ms = <0>;
+        time-to-max-speed-ms = <500>;
+        acceleration-exponent = <1>;
+    };
+
+    move_horiz: move_horiz {
+        compatible = "zmk,behavior-mouse-move";
+        label = "MOVE_HORIZ";
+        #sensor-binding-cells = <0>;
+        delay-ms = <0>;
+        time-to-max-speed-ms = <500>;
+        acceleration-exponent = <1>;
+    };
 
     keymap {
         compatible = "zmk,keymap";
