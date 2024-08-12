@@ -56,7 +56,7 @@
         label = "Pixart PAW3395";        
         irq-gpios = <&gpio0 6 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
         spi-max-frequency = <2000000>;
-        cpi = <1000>;
+
     };
 };
 / {
