@@ -65,24 +65,5 @@
         cpi = <1000>;
     };
 };
-/ {
-  vtrackball: virtual_input_trackball {
-      compatible = "zmk,virtual-input";
-  };
 
-  
-};
-
-/ {
-    input_relay_config_trackball {
-        compatible = "zmk,split-peripheral-input-relay";
-        
-        /* channel id, used to filter incoming annotated input event from split peripheral */
-        /* NOTE: should matching relay-channel on peripheral overlay */
-        relay-channel = <102>;
-
-        /* virtual input device on central, which used to emit input event as an agent device */
-        device = <&trackball>;
-    };
-};
 
