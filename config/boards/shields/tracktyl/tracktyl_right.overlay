@@ -1,7 +1,4 @@
 #include "tracktyl.dtsi"
-#define INPUT_REL_X 0x00                /**< Relative X coordinate */
-#define INPUT_REL_Y 0x01
-#define INPUT_EV_REL 0x02 
 &default_transform { // The matrix transform for this board is 6 columns over because the left half is 6 columns wide according to the matrix.
     col-offset = <6>;
 };
@@ -59,9 +56,6 @@
         label = "Pixart PAW3395";        
         irq-gpios = <&gpio0 6 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
         spi-max-frequency = <2000000>;
-        evt-type = <INPUT_EV_REL>;
-        x-input-code = <INPUT_REL_X>;
-        y-input-code = <INPUT_REL_Y>;
         cpi = <1000>;
     };
 };
