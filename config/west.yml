@@ -7,6 +7,5 @@ manifest:
       remote: zmkfirmware
       revision: feat/pointers-move-scroll
       import: app/west.yml
-    - name: paw3395-module
   self:
     path: config
