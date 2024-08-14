@@ -5,26 +5,8 @@
 #include <dt-bindings/zmk/mouse.h>
 
 #define DEFAULT 0
-
-/ {
-    move_vert: move_vert {
-        compatible = "zmk,behavior-mouse-move";
-        label = "MOVE_VERT";
-        #sensor-binding-cells = <0>;
-        delay-ms = <0>;
-        time-to-max-speed-ms = <500>;
-        acceleration-exponent = <1>;
-    };
-
-    move_horiz: move_horiz {
-        compatible = "zmk,behavior-mouse-move";
-        label = "MOVE_HORIZ";
-        #sensor-binding-cells = <0>;
-        delay-ms = <0>;
-        time-to-max-speed-ms = <500>;
-        acceleration-exponent = <1>;
-    };
-
+#define Combo_layer 1
+#define arrows 2
     behaviors {
     };
 
