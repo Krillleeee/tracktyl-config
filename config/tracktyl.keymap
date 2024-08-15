@@ -65,11 +65,11 @@
 
         Combo_layer {
             bindings = <
-&kp PIPE   &kp AT            &kp AMPS          &kp HASH        &kp PERCENT              &kp DOLLAR           &kp RA(NUMBER_5)      &kp RA(NUMBER_4)          &kp RA(NUMBER_3)  &kp TILDE          &kp GRAVE      &kp LC(F)
-&kp EXCL   &kp N1            &kp N2            &kp N3          &kp N4                   &kp N5               &kp N6                &kp N7                    &kp N8            &kp N9             &kp N0         &kp QUESTION
-&kp LC(A)  &kp GREATER_THAN  &kp LEFT_BRACKET  &kp LEFT_BRACE  &kp KP_LEFT_PARENTHESIS  &kp KP_DIVIDE        &kp NON_US_BACKSLASH  &kp KP_RIGHT_PARENTHESIS  &kp RIGHT_BRACE   &kp RIGHT_BRACKET  &kp LESS_THAN  &kp LC(L)
-&kp LCTRL  &kp LEFT_WIN      &kp LEFT_ALT      &kp LC(C)       &kp LC(V)                &kp DOUBLE_QUOTES    &kp SINGLE_QUOTE      &kp PLUS                  &kp CARET         &kp SEMICOLON      &kp COLON      &kp STAR
-&trans     &trans            &trans            &trans          &trans                   &trans               &kp UNDER             &kp MINUS                 &kp EQUAL
+&kp PIPE   &kp AT            &kp AMPS          &kp HASH        &kp PERCENT           &kp DOLLAR           &kp RA(NUMBER_5)      &kp RA(NUMBER_4)       &kp RA(NUMBER_3)  &kp TILDE          &kp GRAVE      &kp LC(F)
+&kp EXCL   &kp N1            &kp N2            &kp N3          &kp N4                &kp N5               &kp N6                &kp N7                 &kp N8            &kp N9             &kp N0         &kp QUESTION
+&kp LC(A)  &kp GREATER_THAN  &kp LEFT_BRACKET  &kp LEFT_BRACE  &kp LEFT_PARENTHESIS  &kp SLASH            &kp NON_US_BACKSLASH  &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACE   &kp RIGHT_BRACKET  &kp LESS_THAN  &kp LC(L)
+&kp LCTRL  &kp LEFT_WIN      &kp LEFT_ALT      &kp LC(C)       &kp LC(V)             &kp DOUBLE_QUOTES    &kp SINGLE_QUOTE      &kp PLUS               &kp CARET         &kp SEMICOLON      &kp COLON      &kp STAR
+&trans     &trans            &trans            &trans          &trans                &trans               &kp UNDER             &kp MINUS              &kp EQUAL
             >;
         };
 
