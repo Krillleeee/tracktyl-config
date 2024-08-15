@@ -1,11 +1,16 @@
-manifest:
-  remotes:
+ remotes:
     - name: zmkfirmware
       url-base: https://github.com/petejohanson
+    - name: Krillleeee
+      url-base: https://github.com/Krillleeee
+
   projects:
     - name: zmk
       remote: zmkfirmware
       revision: feat/pointers-move-scroll
       import: app/west.yml
+    - name: paw3395-module
+      remote: Krillleeee
+      revision: main
   self:
     path: config
