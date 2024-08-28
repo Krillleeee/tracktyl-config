@@ -3,7 +3,8 @@ if SHIELD_TRACKTYL_LEFT
     config ZMK_KEYBOARD_NAME
         default "Tracktyl (Left)"
 
-    
+    config ZMK_SPLIT_BLE_ROLE_CENTRAL
+        default y
 endif
 
 if SHIELD_TRACKTYL_RIGHT
@@ -11,8 +12,7 @@ if SHIELD_TRACKTYL_RIGHT
     config ZMK_KEYBOARD_NAME
         default "Tracktyl (Right)"
 
-    config ZMK_SPLIT_BLE_ROLE_CENTRAL
-        default y
+    
 
 endif
 
