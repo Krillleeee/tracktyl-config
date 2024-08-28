@@ -20,7 +20,7 @@
                 compatible = "zmk,input-listener";
                 device = <&pd1>;
 	};
-}
+}/
 / {
     combos {
         compatible = "zmk,combos";
