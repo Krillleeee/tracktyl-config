@@ -72,7 +72,12 @@
         y-input-code = <INPUT_REL_Y>;
     };
 };
-
+/ {
+  trackball_listener {
+    compatible = "zmk,input-listener";
+    device = <&trackball>;
+  };
+};
 
 };
 
