@@ -78,7 +78,7 @@
 };
 
 / {
-  vtrackpad: virtual_input_trackpad {
+  vtrackpad: virtual_input_trackball2 {
     compatible = "zmk,virtual-input";
   };
 
@@ -89,7 +89,7 @@
 };
 
 / {
-  input_relay_config_trackpad {
+ input_relay_config_trackball2 {
     compatible = "zmk,split-peripheral-input-relay";
     
     /* channel id, used to filter incoming annotated input event from split peripheral */
@@ -97,6 +97,6 @@
     relay-channel = <203>;
 
     /* virtual input device on central, which used to emit input event as an agent device */
-    device = <&trackpad>;
+    device = <&trackball>;
   };
 };
