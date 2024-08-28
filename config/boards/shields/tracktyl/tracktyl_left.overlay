@@ -31,7 +31,7 @@
 
 /* this is an alias of your actual wired input device sensor in your peripheral shield. */
 /* e.g. SPI optical sensor for trackball */
-&pd0 {
+&pd1 {
 	status = "okay";
 	/* the rest of sensor config should be config here, e.g. gpios */
 };
