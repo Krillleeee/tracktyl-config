@@ -79,9 +79,7 @@
       compatible = "zmk,virtual-input";
   };
 
-  vtrackpad: virtual_input_trackpad {
-    compatible = "zmk,virtual-input";
-  };
+ 
 };
 
 / {
