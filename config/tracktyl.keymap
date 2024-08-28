@@ -7,21 +7,16 @@
 #define DEFAULT 0
 #define Combo_layer 1
 #define arrows 2
-/ {
-	/* assign `input-listener` to all pointing devices */
-	/* &pd0 on central, &pd1 on peripheral */
 
-        trackball_central_listener {
-                compatible = "zmk,input-listener";
-                device = <&pd0>;
-	};
-
-        trackball_peripheral_listener {
-                compatible = "zmk,input-listener";
-                device = <&pd1>;
-	};
-}/
 / {
+ trackball_peripheral_listener {
+        compatible = "zmk,input-behavior-listener";
+        device = <&vtrackball>;
+        layers = <QWERTY NAV NUM SYS>;
+        evt-type = <INPUT_EV_REL>;
+        x-input-code = <INPUT_REL_X>;
+        y-input-code = <INPUT_REL_Y>;
+   };
     combos {
         compatible = "zmk,combos";
 
