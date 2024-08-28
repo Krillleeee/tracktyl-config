@@ -78,7 +78,7 @@
 };
 
 / {
-  vtrackpad: virtual_input_trackball2 {
+  vtrackball2: virtual_input_trackball2 {
     compatible = "zmk,virtual-input";
   };
 
@@ -89,7 +89,7 @@
 };
 
 / {
- input_relay_config_trackball2 {
+ input_relay_config_trackball {
     compatible = "zmk,split-peripheral-input-relay";
     
     /* channel id, used to filter incoming annotated input event from split peripheral */
