@@ -20,8 +20,6 @@ manifest:
     - name: zmk-input-behavior-listener
       remote: badjeff
       revision: main
-    - name: zmk-dongle-display
-      remote: englmaxi
-      revision: main
+
   self:
     path: config
