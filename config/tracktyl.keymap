@@ -41,6 +41,21 @@
                 #binding-cells = <1>;
                 time-to-live-ms = <1000>;
         };
+trackball_scroll_listener2 {
+        compatible = "zmk,input-behavior-listener";
+        device = <&vtrackball2>;
+        layers = <3>;
+        evt-type = <INPUT_EV_REL>;
+        x-input-code = <INPUT_REL_MISC>;
+        y-input-code = <INPUT_REL_WHEEL>;
+        bindings = <&ib_wheel_scaler 1 25>;
+        };
+    /* adjust cooldown waiting period for mouse key layer (MSK) after activated */
+        ib_tog_layer: ib_tog_layer {
+                compatible = "zmk,input-behavior-tog-layer";
+                #binding-cells = <1>;
+                time-to-live-ms = <1000>;
+        };
 
         /* define a resolution down scaler only for INPUT_REL_WHEEL */
         ib_wheel_scaler: ib_wheel_scaler {
