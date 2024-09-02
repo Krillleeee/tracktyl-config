@@ -94,6 +94,31 @@
             bindings = <&sk LEFT_SHIFT>;
             key-positions = <28 31>;
         };
+
+        paste {
+            bindings = <&kp LC(V)>;
+            key-positions = <40 28>;
+        };
+
+        copy {
+            bindings = <&kp LC(C)>;
+            key-positions = <39 27>;
+        };
+
+        cut {
+            bindings = <&kp LC(C)>;
+            key-positions = <26 38>;
+        };
+
+        undo {
+            bindings = <&kp LC(Z)>;
+            key-positions = <37 25>;
+        };
+
+        redo {
+            bindings = <&kp LC(Y)>;
+            key-positions = <25 13>;
+        };
     };
 
     keymap {
