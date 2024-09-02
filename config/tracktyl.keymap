@@ -51,7 +51,7 @@
         };
 
         scroll {
-            bindings = <&mkp MCLK>;
+            bindings = <&mo 3>;
             key-positions = <43 45>;
         };
 
