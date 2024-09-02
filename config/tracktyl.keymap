@@ -9,14 +9,13 @@
 #define arrows 2
 
 / {
- trackball_listener {
+    trackball_listener {
         compatible = "zmk,input-behavior-listener";
         device = <&vtrackball>;
         layers = <0>;
         evt-type = <INPUT_EV_REL>;
         x-input-code = <INPUT_REL_X>;
         y-input-code = <INPUT_REL_Y>;
-
     };
 
     trackball_listener2 {
@@ -27,6 +26,7 @@
         x-input-code = <INPUT_REL_MISC>;
         y-input-code = <INPUT_REL_WHEEL>;
     };
+
     combos {
         compatible = "zmk,combos";
 
@@ -52,7 +52,42 @@
 
         scroll {
             bindings = <&mkp MCLK>;
-            key-positions = <43 44 45>;
+            key-positions = <43 45>;
+        };
+
+        newtab {
+            bindings = <&kp LC(T)>;
+            key-positions = <9 21>;
+        };
+
+        oldtab {
+            bindings = <&kp LC(LS(T))>;
+            key-positions = <7 19>;
+        };
+
+        closetab {
+            bindings = <&kp LC(W)>;
+            key-positions = <8 20>;
+        };
+
+        tableft {
+            bindings = <&kp LC(LS(TAB))>;
+            key-positions = <20 19>;
+        };
+
+        righttab {
+            bindings = <&kp LC(TAB)>;
+            key-positions = <20 21>;
+        };
+
+        alttabback {
+            bindings = <&kp LS(TAB)>;
+            key-positions = <15 14>;
+        };
+
+        alttabright {
+            bindings = <&kp LC(LA(TAB))>;
+            key-positions = <15 16>;
         };
     };
 
@@ -78,11 +113,11 @@
 
         default_layer {
             bindings = <
-&kp ESCAPE      &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp N5     &kp NUMBER_6  &kp N7     &kp N8         &kp N9   &kp N0     &kp N0
-&kp TAB         &kp Q         &kp W         &kp E         &kp R         &kp T      &kp Y         &kp U      &kp I          &kp O    &kp P      &kp RA(W)
-&kp CAPSLOCK    &kp A         &kp S         &kp D         &kp F         &kp G      &kp H         &kp J      &kp K          &kp L    &kp RA(P)  &kp RA(Q)
-&kp LEFT_SHIFT  &kp Z         &kp X         &kp C         &kp V         &kp B      &kp N         &kp M      &kp COMMA      &kp DOT  &kp STAR   &kp ASTERISK
-&kp SPACE       &mo 1         &mo 2        &kp DELETE    &kp ENTER  &kp BACKSPACE
+&kp ESCAPE      &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp N5         &kp NUMBER_6  &kp N7  &kp N8     &kp N9   &kp N0     &kp N0
+&kp TAB         &kp Q         &kp W         &kp E         &kp R         &kp T          &kp Y         &kp U   &kp I      &kp O    &kp P      &kp RA(W)
+&kp CAPSLOCK    &kp A         &kp S         &kp D         &kp F         &kp G          &kp H         &kp J   &kp K      &kp L    &kp RA(P)  &kp RA(Q)
+&kp LEFT_SHIFT  &kp Z         &kp X         &kp C         &kp V         &kp B          &kp N         &kp M   &kp COMMA  &kp DOT  &kp STAR   &kp ASTERISK
+&kp SPACE       &mo 1         &mo 2         &kp DELETE    &kp ENTER     &kp BACKSPACE
             >;
         };
 
@@ -92,7 +127,7 @@
 &kp EXCL   &kp N1            &kp N2            &kp N3          &kp N4                &kp N5             &kp N6                &kp N7                 &kp N8            &kp N9             &kp N0         &kp QUESTION
 &kp LC(A)  &kp GREATER_THAN  &kp LEFT_BRACKET  &kp LEFT_BRACE  &kp LEFT_PARENTHESIS  &kp SLASH          &kp NON_US_BACKSLASH  &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACE   &kp RIGHT_BRACKET  &kp LESS_THAN  &kp LC(L)
 &kp LCTRL  &kp LEFT_WIN      &kp LEFT_ALT      &kp LC(C)       &kp LC(V)             &kp DOUBLE_QUOTES  &kp SINGLE_QUOTE      &kp PLUS               &kp CARET         &kp SEMICOLON      &kp COLON      &kp STAR
-     &trans          &trans                &trans             &kp UNDER             &kp MINUS              &kp EQUAL
+&trans     &trans            &trans            &kp UNDER       &kp MINUS             &kp EQUAL
             >;
         };
 
@@ -102,9 +137,18 @@
 &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans          &kp UP_ARROW    &trans           &trans   &trans
 &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &trans   &trans
 &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans          &trans          &trans           &trans   &trans
-&trans  &trans  &trans  &trans  &trans          &trans
+&trans  &trans  &trans  &trans  &trans  &trans
+            >;
+        };
+
+        scroll {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
             >;
         };
     };
 };
-
