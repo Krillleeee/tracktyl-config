@@ -33,7 +33,6 @@ trackball_scroll_listener {
         evt-type = <INPUT_EV_REL>;
         x-input-code = <INPUT_REL_MISC>;
         y-input-code = <INPUT_REL_WHEEL>;
-        bindings = <&ib_wheel_scaler 1 25>;
     };
     trackball_scroll_listener2 {
         compatible = "zmk,input-behavior-listener";
