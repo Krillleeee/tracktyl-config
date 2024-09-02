@@ -43,7 +43,7 @@
     status = "okay";
 };
 
-&trackball {
+&trackball2 {
     status = "okay";
 };
 
@@ -56,7 +56,7 @@
 	};
 	input_relay_config_trackball {
 		compatible = "zmk,split-peripheral-input-relay";
-		device = <&trackball>;
+		device = <&trackball2>;
 		relay-channel = <102>;
 	};
 };
