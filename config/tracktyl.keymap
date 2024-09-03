@@ -35,12 +35,7 @@
         y-input-code = <INPUT_REL_WHEEL>;
         bindings = <&ib_wheel_scaler 1 25>;
         };
-    /* adjust cooldown waiting period for mouse key layer (MSK) after activated */
-        ib_tog_layer: ib_tog_layer {
-                compatible = "zmk,input-behavior-tog-layer";
-                #binding-cells = <1>;
-                time-to-live-ms = <1000>;
-        };
+ 
 trackball_scroll_listener2 {
         compatible = "zmk,input-behavior-listener";
         device = <&vtrackball2>;
