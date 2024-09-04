@@ -42,7 +42,7 @@
 	input_relay_config_trackball {
 		compatible = "zmk,split-peripheral-input-relay";
 		device = <&vtrackball>;
-		relay-channel = <102>;
+		relay-channel = <108>;
 	};
 
 	input_relay_config_trackball2 {
