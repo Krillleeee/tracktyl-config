@@ -24,8 +24,8 @@
         device = <&vtrackball2>;
         layers = <0>;
         evt-type = <INPUT_EV_REL>;
-        x-input-code = <INPUT_REL_MISC>;
-        y-input-code = <INPUT_REL_WHEEL>;
+        x-input-code = <INPUT_REL_X>;
+        y-input-code = <INPUT_REL_Y>;
     };
 
     trackball_scroll_listener {
@@ -43,8 +43,8 @@
         device = <&vtrackball2>;
         layers = <3>;
         evt-type = <INPUT_EV_REL>;
-        x-input-code = <INPUT_REL_X>;
-        y-input-code = <INPUT_REL_Y>;
+        x-input-code = <INPUT_REL_MISC>;
+        y-input-code = <INPUT_REL_WHEEL>;
         bindings = <&ib_wheel_scaler 1 25>;
     };
 
