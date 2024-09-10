@@ -8,6 +8,7 @@
 #define Combo_layer 1
 #define arrows 2
 #define scroll 3
+#define sniper 4
 
 / {
     trackball_listener {
@@ -60,8 +61,7 @@
         evt-type = <INPUT_EV_REL>;
         x-input-code = <INPUT_REL_X>;
         y-input-code = <INPUT_REL_Y>;
-        scale-multiplier = <1>;
-        scale-divisor = <16>;
+        scale-divisor = <4>;
      };
     /* adjust cooldown waiting period for mouse key layer (MSK) after activated */
 
@@ -109,7 +109,7 @@
         };
 
         newtab {
-            bindings = <&kp LC(LS(T))>;
+            bindings = <&kp LC(T)>;
             key-positions = <9 21>;
         };
 
