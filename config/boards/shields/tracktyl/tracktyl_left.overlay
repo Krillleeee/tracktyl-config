@@ -1,5 +1,5 @@
 #include "tracktyl.dtsi" // Notice that the main dtsi files are included in the overlay.
-
+#include "tracktyl_3610.dtsi"
 
 &default_transform {
     col-offset = <0>;
@@ -27,5 +27,24 @@
         
 };
 
+&spi0 {
+    status = "okay";
+};
 
+&trackball {
+    status = "okay";
+};
+
+/ {
+	vtrackball: virtual_input_trackball {
+		compatible = "zmk,virtual-input";
+	};
+	
+
+	input_relay_config_trackball {
+		compatible = "zmk,split-peripheral-input-relay";
+		device = <&trackball>;
+		relay-channel = <202>;
+	};
+};
 
