@@ -10,8 +10,6 @@
 #define scroll 3
 
 / {
-    
-
     combos {
         compatible = "zmk,combos";
 
@@ -41,7 +39,7 @@
         };
 
         newtab {
-            bindings = <&kp LC(LS(D))>;
+            bindings = <&kp LC(LS(T))>;
             key-positions = <9 21>;
         };
 
@@ -129,6 +127,16 @@
             bindings = <&kp RIGHT>;
             key-positions = <21 33>;
         };
+
+        alttabenter {
+            bindings = <&kp ENTER>;
+            key-positions = <15 3>;
+        };
+
+        sniper {
+            bindings = <&mo 4>;
+            key-positions = <34 46>;
+        };
     };
 
     keymap {
@@ -182,6 +190,16 @@
         };
 
         scroll {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+            >;
+        };
+
+        sniper {
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
