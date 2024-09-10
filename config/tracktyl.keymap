@@ -54,7 +54,16 @@
         bindings = <&ib_wheel_scaler 1 25>;
     };
 
-    /* adjust cooldown waiting period for mouse key layer (MSK) after activated */
+    trackball_snipe_listener {
+         compatible = "zmk,input-behavior-listener";
+         device = <&vtrackball2>;
+        layers = <0>;
+         evt-type = <INPUT_EV_REL>;
+         x-input-code = <INPUT_REL_X>;
+         y-input-code = <INPUT_REL_Y>;
+        scale-multiplier = <1>;
+     scale-divisor = <6>;
+     };
 
     ib_tog_layer: ib_tog_layer {
         compatible = "zmk,input-behavior-tog-layer";
