@@ -213,6 +213,11 @@
             bindings = <&sl 1>;
             key-positions = <28 29>;
         };
+
+        middleclick {
+            bindings = <&mkp MCLK>;
+            key-positions = <43 42>;
+        };
     };
 
     keymap {
