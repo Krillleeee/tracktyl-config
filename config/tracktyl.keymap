@@ -18,9 +18,10 @@
         evt-type = <INPUT_EV_REL>;
         x-input-code = <INPUT_REL_X>;
         y-input-code = <INPUT_REL_Y>;
-     //     scale-multiplier = <1>;
+
+        //     scale-multiplier = <1>;
+
         scale-divisor = <1.5>;
-    
     };
 
     trackball_listener2 {
@@ -30,9 +31,10 @@
         evt-type = <INPUT_EV_REL>;
         x-input-code = <INPUT_REL_X>;
         y-input-code = <INPUT_REL_Y>;
-   //     scale-multiplier = <1>;
+
+        //     scale-multiplier = <1>;
+
         scale-divisor = <5>;
-  
     };
 
     trackball_scroll_listener {
@@ -56,6 +58,7 @@
         y-input-code = <INPUT_REL_WHEEL>;
         bindings = <&ib_wheel_scaler 1 25>;
     };
+
     trackball_snipe_listener {
         compatible = "zmk,input-behavior-listener";
         device = <&vtrackball>;
@@ -64,7 +67,8 @@
         x-input-code = <INPUT_REL_X>;
         y-input-code = <INPUT_REL_Y>;
         scale-divisor = <4>;
-     };
+    };
+
     /* adjust cooldown waiting period for mouse key layer (MSK) after activated */
 
     ib_tog_layer: ib_tog_layer {
@@ -107,7 +111,7 @@
 
         scroll {
             bindings = <&mo 3>;
-            key-positions = <43 45>;
+            key-positions = <30 31>;
         };
 
         newtab {
@@ -137,17 +141,17 @@
 
         alttabback {
             bindings = <&kp LS(TAB)>;
-            key-positions = <14 2>;
+            key-positions = <2 1>;
         };
 
         alttabright {
             bindings = <&kp LC(LA(TAB))>;
-            key-positions = <16 4>;
+            key-positions = <3 4>;
         };
 
         shift {
             bindings = <&sk LEFT_SHIFT>;
-            key-positions = <25 34>;
+            key-positions = <34 46>;
         };
 
         paste {
@@ -161,7 +165,7 @@
         };
 
         cut {
-            bindings = <&kp LC(C)>;
+            bindings = <&kp LC(X)>;
             key-positions = <26 38>;
         };
 
@@ -199,14 +203,15 @@
             bindings = <&kp RIGHT>;
             key-positions = <21 33>;
         };
+
         alttabenter {
             bindings = <&kp ENTER>;
-            key-positions = <15 3>;
+            key-positions = <3 2>;
         };
 
-        sniper {
-            bindings = <&mo 4>;
-            key-positions = <34 46>;
+        layer2 {
+            bindings = <&sl 1>;
+            key-positions = <28 29>;
         };
     };
 
