@@ -64,7 +64,19 @@
         evt-type = <INPUT_EV_REL>;
         x-input-code = <INPUT_REL_X>;
         y-input-code = <INPUT_REL_Y>;
-        scale-divisor = <4>;
+        scale-multiplier = <3>;
+        //scale-divisor = <4>;
+    };
+
+    trackball_snipe_listener2 {
+        compatible = "zmk,input-behavior-listener";
+        device = <&vtrackball2>;
+        layers = <4>;
+        evt-type = <INPUT_EV_REL>;
+        x-input-code = <INPUT_REL_X>;
+        y-input-code = <INPUT_REL_Y>;
+        scale-multiplier = <7>;
+        //scale-divisor = <4>;
     };
 
     /* adjust cooldown waiting period for mouse key layer (MSK) after activated */
